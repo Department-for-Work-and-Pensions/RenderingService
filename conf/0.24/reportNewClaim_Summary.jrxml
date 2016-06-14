@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-27T09:56:47 -->
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-14T14:04:19 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -934,12 +934,6 @@
 			</staticText>
 		</band>
 		<band height="37" splitType="Immediate">
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="0" y="19" width="180" height="18" isRemoveLineWhenBlank="true" uuid="3fb16258-db61-4296-bdb3-0848513491ce">
-					<property name="net.sf.jasperreports.export.html.id" value="summary-claim-date-a"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement style="SubHeadingClaim" x="0" y="0" width="367" height="18" uuid="02d46fba-cc2b-476f-9355-3d434fb7678f">
 					<property name="local_mesure_unitwidth" value="pixel"/>
@@ -958,14 +952,18 @@
 				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Caring Start Date]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="367" y="17" width="180" height="18" isRemoveLineWhenBlank="true" uuid="3fb16258-db61-4296-bdb3-0848513491ce">
+				<reportElement style="Answer" positionType="Float" x="367" y="18" width="180" height="18" isRemoveLineWhenBlank="true" uuid="3fb16258-db61-4296-bdb3-0848513491ce">
 					<property name="net.sf.jasperreports.export.html.id" value="summary-caring-starting-dat-a"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{CaringStartDateAnswer} ? $F{CaringStartDateAnswer} : $F{ClaimDateAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement style="Answer" positionType="Float" x="0" y="18" width="180" height="18" isRemoveLineWhenBlank="true" uuid="29d7da0d-0622-4554-afb9-b3a8c56ebf23"/>
+				<text><![CDATA[Claim date]]></text>
+			</staticText>
 		</band>
 		<band height="41" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
